@@ -38,6 +38,8 @@ function navSlide() {
 
   if (scroll_top >= appear_value) {
     $nav_bar.addClass('nav-bar-visible');
+    $nav_bar.addClass('nav-bar-box-shadow');
+
     if (isDark == true) {
       $nav_bar.removeClass('theme-dark');
       $nav_bar_links.removeClass('font-white');
@@ -45,6 +47,7 @@ function navSlide() {
   }
   else {
     $nav_bar.removeClass('nav-bar-visible');
+    $nav_bar.removeClass('nav-bar-box-shadow');
 
     if (isDark == true) {
       $nav_bar.addClass('theme-dark');
