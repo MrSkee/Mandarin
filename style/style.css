@@ -4,6 +4,20 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-size: 10rem;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
 .main-wrapper {
   padding: 0;
 }
@@ -16,15 +30,20 @@ body {
 }
 
 .nav-bar {
-  background-color: red;
+  background-color: white;
   width: 100%;
-  height: 50px;
-  max-height: 50px;
+  height: 60px;
+  max-height: 60px;
   border-top: 3px solid;
   border-color: rgb(84, 100, 246);
   z-index: 999;
   opacity: 0;
   position: absolute;
+}
+
+.nav-bar-container {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .visible {
@@ -36,17 +55,27 @@ body {
   opacity: 1;
   position: fixed;
   top: 0;
-  
+
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
+.nav-bar a {
+  float: right;
+  text-decoration: none;
+  font-size: 20pt;
+  color: black;
+  margin: 9px 20px 0 20px;
+  letter-spacing: 2px;
+}
 
-
-.nav-bar .a {
-  float: left;
+#logo {
+   font-family: 'Raleway';
+   float: left;
+   font-size: 25pt;
+   margin-top: 8px;
 }
 
 .body-container {
@@ -59,7 +88,7 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 10% 5% 10% 5%;
-  font-size: 10em;
+  font-size: 10rem;
 }
 
 .header-item {
@@ -67,6 +96,13 @@ body {
   text-align: center;
   letter-spacing: 5vw;
   padding-top: 15%;
+}
+
+.header-item h2 {
+  letter-spacing: 1vw;
+  text-transform: uppercase;
+  font-family: 'Raleway';
+  margin-left: -4%;
 }
 
 #item-01 {
