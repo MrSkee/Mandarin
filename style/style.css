@@ -1,3 +1,19 @@
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    border-top: 10px solid #000;
+}
+
+#arrow {
+  position: relative;
+  left: 50vw;
+  top: 12%;
+  z-index: 500;
+}
+
 body {
   font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
   margin: 0;
@@ -87,7 +103,6 @@ h2 {
 }
 
 .header-item {
-  height: 100vh;
   text-align: center;
   letter-spacing: 5vw;
   padding-top: 25vh;
