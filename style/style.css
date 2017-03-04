@@ -78,11 +78,6 @@ h2 {
    margin-top: 8px;
 }
 
-.body-container {
-  float: left;
-  width: 100%
-}
-
 .item {
   float: left;
   width: 90%;
@@ -103,6 +98,11 @@ h2 {
   text-transform: uppercase;
   font-family: 'Raleway';
   margin-left: -4%;
+}
+
+.body-container {
+  float: left;
+  width: 100%
 }
 
 #intro {
