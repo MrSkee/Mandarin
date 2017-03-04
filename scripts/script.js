@@ -21,7 +21,7 @@ console.log("test");*/
 
 var $nav_bar = $('.nav-bar');
 var nav_barHeight = $nav_bar.height();
-var appear_value = $('.header-container').height() - $nav_bar.height();
+var appear_value = $('.header-container').height();
 var scroll_top = $(window).scrollTop();
 
 function navSlide() {
@@ -32,7 +32,7 @@ function navSlide() {
   }
   else {
     $nav_bar.removeClass('nav-bar-visible');
-    
+
     if (scroll_top > nav_barHeight) {
       $nav_bar.removeClass('visible');
     }
