@@ -20,7 +20,7 @@ console.log("test");*/
 
 
 var $nav_bar = $('.nav-bar');
-var offset_value = $('.header-container').height();
+var offset_value = $('.header-container').height() - $nav_bar.height() * 2;
 
 function navSlide() {
   var scroll_top = $(window).scrollTop();
