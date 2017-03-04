@@ -20,16 +20,25 @@ console.log("test");*/
 
 
 var $nav_bar = $('.nav-bar');
-var offset_value = $('.header-container').height() - $nav_bar.height() * 2;
+var nav_barHeight = $nav_bar.height();
+var appear_value = $('.header-container').height() - $nav_bar.height();
+var scroll_top = $(window).scrollTop();
 
 function navSlide() {
-  var scroll_top = $(window).scrollTop();
+  scroll_top = $(window).scrollTop();
 
-  if (scroll_top >= offset_value) {
-    $nav_bar.removeClass('hidden');
+  if (scroll_top >= appear_value) {
+    $nav_bar.addClass('nav-bar-visible');
   }
   else {
-    $nav_bar.addClass('hidden');
+    $nav_bar.removeClass('nav-bar-visible');
+    
+    if (scroll_top > nav_barHeight) {
+      $nav_bar.removeClass('visible');
+    }
+    else {
+      $nav_bar.addClass('visible');
+    }
   }
 }
 

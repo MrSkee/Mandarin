@@ -22,23 +22,31 @@ body {
   max-height: 50px;
   border-top: 3px solid;
   border-color: rgb(84, 100, 246);
-  position: fixed;
   z-index: 999;
+  opacity: 0;
+  position: absolute;
+}
+
+.visible {
   opacity: 1;
+}
+
+.nav-bar-visible {
+  /*display: none;*/
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
+
+
 .nav-bar .a {
   float: left;
-}
-
-.hidden {
-  /*display: none;*/
-  opacity: 0;
-  top: -50px;
 }
 
 .body-container {
