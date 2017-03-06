@@ -28,6 +28,8 @@ var $nav_lists = $('.nav li');
 
 var clickScroll = false;
 
+var isCorrect = true;
+
 
 var isDark = false;
 var $header = $('#header');
@@ -152,11 +154,23 @@ $banner_links.click(function (x) {
 
     x.preventDefault();
 
+    if ($(window).scrollTop() >= $header.height() / 2) {
+      $banner_lists.removeClass('active');
+      $link.parent().addClass('active');
+    }
+    else {
+      isCorrect = false;
+    }
+
+
     $('html,body').stop().animate({
       'scrollTop': ($target.offset().top + 1) + 'px'
     }, 900, 'swing', function () {
-      $banner_lists.removeClass('active');
-      $link.parent().addClass('active');
+      if (isCorrect == false) {
+        $banner_lists.removeClass('active');
+        $link.parent().addClass('active');
+        isCorrect = true;
+      }
       clickScroll = false;
       //window.location.hash = target; /* This displays the anchor in the url*/
     })
