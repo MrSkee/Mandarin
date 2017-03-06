@@ -130,6 +130,10 @@ h2 {
   opacity: 1;
 }
 
+.noborder {
+  border-top: 0px;
+}
+
 .nav-bar-visible {
   /*display: none;*/
   opacity: 1;
@@ -151,12 +155,27 @@ h2 {
   text-decoration: none;
   font-size: 20pt;
   margin: 9px 20px 0 20px;
+  height: 49px;
   letter-spacing: 2px;
 
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+.nav-bar a:hover {
+  color: #999196;
+
+  -webkit-transition: all 0.0s ease-in-out;
+  -moz-transition: all 0.0s ease-in-out;
+  -o-transition: all 0.0s ease-in-out;
+  transition: all 0.0s ease-in-out;
+}
+
+.active {
+  border-bottom: 3px solid;
+  border-color: #5464f6;
 }
 
 .font-black {

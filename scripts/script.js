@@ -37,7 +37,7 @@ $(document).scroll(function navSlide() {
   scroll_top = $(window).scrollTop();
 
   if (scroll_top >= appear_value) {
-    $nav_bar.addClass('nav-bar-visible nav-bar-box-shadow');
+    $nav_bar.addClass('nav-bar-visible nav-bar-box-shadow noborder');
 
     if (isDark == true) {
       $nav_bar.removeClass('theme-dark');
@@ -45,7 +45,7 @@ $(document).scroll(function navSlide() {
     }
   }
   else {
-    $nav_bar.removeClass('nav-bar-visible nav-bar-box-shadow');
+    $nav_bar.removeClass('nav-bar-visible nav-bar-box-shadow noborder');
 
     if (isDark == true) {
       $nav_bar.addClass('theme-dark');
