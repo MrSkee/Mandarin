@@ -21,12 +21,12 @@ console.log("test");*/
 
 var $nav_bar = $('.nav-bar');
 var nav_barHeight = $nav_bar.height();
-var appear_value = $('.header-container').height();
+var appear_value = $('#header').height();
 var scroll_top = $(window).scrollTop();
 
 
 var isDark = false;
-var $header = $('.header-container');
+var $header = $('#header');
 var $arrow = $('#arrow');
 var $nav_bar_links = $('.nav-bar a');
 
