@@ -33,12 +33,11 @@ var $nav_bar_links = $('.nav-bar a');
 var $arrow_bar = $('#header-bottom');
 var isOutOfBar = true;
 
-function navSlide() {
+$(document).scroll(function navSlide() {
   scroll_top = $(window).scrollTop();
 
   if (scroll_top >= appear_value) {
-    $nav_bar.addClass('nav-bar-visible');
-    $nav_bar.addClass('nav-bar-box-shadow');
+    $nav_bar.addClass('nav-bar-visible nav-bar-box-shadow');
 
     if (isDark == true) {
       $nav_bar.removeClass('theme-dark');
@@ -46,8 +45,7 @@ function navSlide() {
     }
   }
   else {
-    $nav_bar.removeClass('nav-bar-visible');
-    $nav_bar.removeClass('nav-bar-box-shadow');
+    $nav_bar.removeClass('nav-bar-visible nav-bar-box-shadow');
 
     if (isDark == true) {
       $nav_bar.addClass('theme-dark');
@@ -61,10 +59,7 @@ function navSlide() {
       $nav_bar.addClass('visible');
     }
   }
-}
-
-$(window).scroll(navSlide);
-
+})
 
 /*jQuery Smooth Scroll*/
 /*$(function() {
@@ -94,7 +89,7 @@ $(document).ready(function() {
     $('html,body').stop().animate({
       'scrollTop': $target.offset().top
     }, 900, 'swing', function () {
-      window.location.hash = target;
+      //window.location.hash = target; /* This displays the anchor in the url*/
     })
   })
 })
