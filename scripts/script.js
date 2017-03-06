@@ -26,7 +26,8 @@ var scroll_top = $(window).scrollTop();
 var $nav_links = $('.nav a');
 var $nav_lists = $('.nav li');
 
-var clickScroll = false;
+var isClickScroll = false;
+var $clickScroll_link;
 
 var isCorrect = true;
 
@@ -68,7 +69,7 @@ $(document).scroll(function() {
     }
   }
 
-  if(clickScroll == false) {
+  if(isClickScroll == false) {
     $nav_links.each(function() {
       var $link = $($(this).attr('href'));
 
@@ -80,6 +81,12 @@ $(document).scroll(function() {
         $(this).parent().removeClass('active');
       }
     })
+  }
+  else {
+    if ($(window).scrollTop() >= $banner.height()) {
+      $banner_lists.removeClass('active');
+      $clickScroll_link.parent().addClass('active');
+    }
   }
 
 })
@@ -129,34 +136,33 @@ $header.click(function() {
 })
 
 
-$banner_links.click(function (x) {
+$banner_links.click(function clickScroll(x) {
   var $target = $($(this).attr('href'));
-  var $link = $(this);
+  $clickScroll_link = $(this);
 
   if ($target != $('#logo').attr('href')) {
-    clickScroll = true;
+    isClickScroll = true;
 
     x.preventDefault();
 
     if ($(window).scrollTop() >= $banner.height()) {
       $banner_lists.removeClass('active');
-      $link.parent().addClass('active');
+      $clickScroll_link.parent().addClass('active');
     }
     else {
       isCorrect = false;
     }
 
-
     $('html,body').stop().animate({
       'scrollTop': ($target.offset().top + 1) + 'px'
     }, 900, 'swing', function () {
-      if (isCorrect == false) {
+      /*if (isCorrect == false) {
         $banner_lists.removeClass('active');
         $link.parent().addClass('active');
         isCorrect = true;
-      }
+      }*/
 
-      clickScroll = false;
+      isClickScroll = false;
       //window.location.hash = target; /* This displays the anchor in the url*/
     })
   }
@@ -164,7 +170,7 @@ $banner_links.click(function (x) {
 
 $(document).ready(function() {
   $('a[href^="#"]').on('click', function (e) {
-    if (clickScroll == false) {
+    if (isClickScroll == false) {
       e.preventDefault();
 
       var target = this.hash;
