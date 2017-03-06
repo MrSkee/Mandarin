@@ -144,19 +144,21 @@ $header.click(function() {
 
 
 $banner_links.click(function (x) {
-  clickScroll = true;
-
-  x.preventDefault();
-
   var $target = $($(this).attr('href'));
   var $link = $(this);
 
-  $('html,body').stop().animate({
-    'scrollTop': ($target.offset().top + 1) + 'px'
-  }, 900, 'swing', function () {
-    $banner_lists.removeClass('active');
-    $link.parent().addClass('active');
-    clickScroll = false;
-    //window.location.hash = target; /* This displays the anchor in the url*/
-  })
+  if ($target != $('#logo').attr('href')) {
+    clickScroll = true;
+
+    x.preventDefault();
+
+    $('html,body').stop().animate({
+      'scrollTop': ($target.offset().top + 1) + 'px'
+    }, 900, 'swing', function () {
+      $banner_lists.removeClass('active');
+      $link.parent().addClass('active');
+      clickScroll = false;
+      //window.location.hash = target; /* This displays the anchor in the url*/
+    })
+  }
 })
