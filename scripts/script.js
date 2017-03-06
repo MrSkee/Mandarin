@@ -102,22 +102,6 @@ $(document).scroll(function() {
   })
 }) */
 
-/*$(document).ready(function() {
-  $('a[href^="#"]').on('click', function (e) {
-    e.preventDefault();
-
-    var target = this.hash;
-    var $target= $(target);
-
-    $('html,body').stop().animate({
-      'scrollTop': ($target.offset().top + 1) + 'px'
-    }, 900, 'swing', function () {
-      //window.location.hash = target; /* This displays the anchor in the url*/
-    /*})
-  })
-})*/
-
-
 $arrow_bar.mouseover(function() {
   isOutOfBar = false;
 })
@@ -154,7 +138,7 @@ $banner_links.click(function (x) {
 
     x.preventDefault();
 
-    if ($(window).scrollTop() >= $header.height() / 2) {
+    if ($(window).scrollTop() >= $banner.height()) {
       $banner_lists.removeClass('active');
       $link.parent().addClass('active');
     }
@@ -171,8 +155,26 @@ $banner_links.click(function (x) {
         $link.parent().addClass('active');
         isCorrect = true;
       }
+
       clickScroll = false;
       //window.location.hash = target; /* This displays the anchor in the url*/
     })
   }
+})
+
+$(document).ready(function() {
+  $('a[href^="#"]').on('click', function (e) {
+    if (clickScroll == false) {
+      e.preventDefault();
+
+      var target = this.hash;
+      var $target= $(target);
+
+      $('html,body').stop().animate({
+        'scrollTop': ($target.offset().top + 1) + 'px'
+      }, 900, 'swing', function () {
+        //window.location.hash = target; /* This displays the anchor in the url*/
+      })
+    }
+  })
 })
