@@ -26,6 +26,8 @@ var scroll_top = $(window).scrollTop();
 var $nav_links = $('.nav a');
 var $nav_lists = $('.nav li');
 
+var clickScroll = false;
+
 
 var isDark = false;
 var $header = $('#header');
@@ -64,17 +66,19 @@ $(document).scroll(function() {
     }
   }
 
-  $nav_links.each(function() {
-    var $link = $($(this).attr('href'));
+  if(clickScroll == false) {
+    $nav_links.each(function() {
+      var $link = $($(this).attr('href'));
 
-    if($link.position().top <=  scroll_top && scroll_top <= $link.position().top + $link.outerHeight()) {
-      $nav_lists.removeClass('active');
-      $(this).parent().addClass('active');
-    }
-    else {
-      $(this).parent().removeClass('active');
-    }
-  })
+      if($link.position().top <=  scroll_top && scroll_top <= $link.position().top + $link.outerHeight()) {
+        $nav_lists.removeClass('active');
+        $(this).parent().addClass('active');
+      }
+      else {
+        $(this).parent().removeClass('active');
+      }
+    })
+  }
 
 })
 
@@ -96,7 +100,7 @@ $(document).scroll(function() {
   })
 }) */
 
-$(document).ready(function() {
+/*$(document).ready(function() {
   $('a[href^="#"]').on('click', function (e) {
     e.preventDefault();
 
@@ -107,9 +111,9 @@ $(document).ready(function() {
       'scrollTop': ($target.offset().top + 1) + 'px'
     }, 900, 'swing', function () {
       //window.location.hash = target; /* This displays the anchor in the url*/
-    })
+    /*})
   })
-})
+})*/
 
 
 $arrow_bar.mouseover(function() {
@@ -138,8 +142,21 @@ $header.click(function() {
   }
 })
 
-/* Old code for add active class on click */
-/*$banner_links.click(function (x) {
-  $banner_lists.removeClass('active');
-  $(this).parent().addClass('active');
-})*/
+
+$banner_links.click(function (x) {
+  clickScroll = true;
+
+  x.preventDefault();
+
+  var $target = $($(this).attr('href'));
+  var $link = $(this);
+
+  $('html,body').stop().animate({
+    'scrollTop': ($target.offset().top + 1) + 'px'
+  }, 900, 'swing', function () {
+    $banner_lists.removeClass('active');
+    $link.parent().addClass('active');
+    clickScroll = false;
+    //window.location.hash = target; /* This displays the anchor in the url*/
+  })
+})
