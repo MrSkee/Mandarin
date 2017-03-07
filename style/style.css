@@ -155,7 +155,7 @@ h2 {
 }
 
 .banner-wrapper a {
-  float: right;
+  float: left;
   text-decoration: none;
   font-size: 20pt;
   margin: 9px 20px 0 20px;
@@ -181,11 +181,12 @@ h2 {
   list-style: none;
   height: 60px;
   margin: 0;
+  float: right;
 }
 
 .banner-wrapper li {
   height: 57.9px;
-  float: right;
+  float: left;
 }
 
 .active {
