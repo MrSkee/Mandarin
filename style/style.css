@@ -127,19 +127,19 @@
   content: "";
   position: absolute;
   display: block;
-  bottom: -.55em;
+  bottom: -.6em;
   border: 1.05em solid #5464f6;
   z-index: -1;
 }
 
 .sh2:before {
-  left: -1.4em;
+  left: -1.35em;
   border-right-width: .9em;
   border-left-color: transparent;
 }
 
 .sh2:after {
-  right: -1.4em;
+  right: -1.35em;
   border-left-width: .9em;
   border-right-color: transparent;
 }
