@@ -104,10 +104,6 @@ h2 {
   padding: 0;
 }
 
-.nav-bar-container {
-
-}
-
 .banner-wrapper {
   clear: both;
   background-color: white;
@@ -125,9 +121,25 @@ h2 {
   transition: all 0.2s ease-in-out;
 }
 
-.banner-container {
+.container {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.content {
+  float: left;
+  max-width: 1300px;
+  margin: 0 5%;
+}
+
+.section {
+  float: left;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10% 5% 10% 5%;
+  font-size: 10rem;
 }
 
 .visible {
@@ -209,14 +221,6 @@ h2 {
    margin-top: 8px;
 }
 
-.item {
-  float: left;
-  width: 90%;
-  margin: 0 auto;
-  padding: 10% 5% 10% 5%;
-  font-size: 10rem;
-}
-
 .header-item {
   text-align: center;
   letter-spacing: 5vw;
@@ -252,12 +256,42 @@ h2 {
   width: 100%
 }
 
-#intro {
-  background-color: rgb(135, 235, 153);
+#body p {
+  font-size: 15pt;
+  float: left;
 }
 
-#body p {
-  font-size: 3vh;
+.indent {
+  text-indent: 2.0em;
+}
+
+.sh1 {
+  background-color: white;
+  color: black;
+  float: left;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-left: 15px solid;
+  border-color: #5464f6;
+  border-radius: 5px;
+}
+
+#intro {
+  background-color: #f2c694;
+}
+
+#school {
+  background-color: #f5a2b5;
+}
+
+#diary {
+  background-color: #9fd5d3;
+}
+
+#letter {
+  background-color: #bbddaa;
 }
 
 /* Footer */
