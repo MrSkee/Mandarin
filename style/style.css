@@ -266,16 +266,62 @@ h2 {
 }
 
 .sh1 {
-  background-color: white;
-  color: black;
-  float: left;
-  font-size: 1.5rem;
-  font-weight: 100;
-  margin-bottom: 10px;
-  padding: 5px 10px;
-  border-left: 15px solid;
-  border-color: #5464f6;
-  border-radius: 5px;
+  font-size: 20pt !important;
+
+  width: 50%;
+
+  position: relative;
+  background: #7d8aff;
+  color: #f2f1f1;
+  text-align: center;
+  padding: 1em 2em;
+  margin: 2em auto 3em;
+
+}
+
+.sh1:before, .sh1:after{
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #5464f6;
+  z-index: -1;
+}
+
+.sh1:before {
+  left: -2em;
+  border-right-width: 1.45em;
+  border-left-color: transparent;
+}
+
+.sh1:after {
+  right: -2em;
+  border-left-width: 1.45em;
+  border-right-color: transparent;
+}
+
+.sh1 .sh1-content:before, .sh1 .sh1-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #3d4ee2 transparent transparent transparent;
+  bottom: -1em;
+}
+
+.sh1 .sh1-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em;
+}
+
+.sh1 .sh1-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
+
+.non-semantic-protector {
+  position: relative;
+  z-index: 1;
 }
 
 #intro {
