@@ -51,6 +51,123 @@
   animation-timing-function: ease-in-out;
 }
 
+/* Headings */
+
+.sh1 {
+  font-size: 30pt !important;
+
+  width: 50%;
+
+  position: relative;
+  background: #7d8aff;
+  color: #f2f1f1;
+  text-align: center;
+  padding: 1em 2em;
+  margin: 2em auto 3em;
+
+}
+
+.sh1:before, .sh1:after{
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #5464f6;
+  z-index: -1;
+}
+
+.sh1:before {
+  left: -2em;
+  border-right-width: 1.45em;
+  border-left-color: transparent;
+}
+
+.sh1:after {
+  right: -2em;
+  border-left-width: 1.45em;
+  border-right-color: transparent;
+}
+
+.sh1 .sh1-content:before, .sh1 .sh1-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #3d4ee2 transparent transparent transparent;
+  bottom: -1em;
+}
+
+.sh1 .sh1-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em;
+}
+
+.sh1 .sh1-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
+
+
+
+.sh2 {
+  font-size: 20pt !important;
+
+  width: 10%;
+
+  position: relative;
+  background: #7d8aff;
+  color: #f2f1f1;
+  text-align: center;
+  padding: .5em 2em;
+  margin: 2em auto 3em;
+
+}
+
+.sh2:before, .sh2:after{
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -.55em;
+  border: 1.05em solid #5464f6;
+  z-index: -1;
+}
+
+.sh2:before {
+  left: -1.4em;
+  border-right-width: .9em;
+  border-left-color: transparent;
+}
+
+.sh2:after {
+  right: -1.4em;
+  border-left-width: .9em;
+  border-right-color: transparent;
+}
+
+.sh2 .sh2-content:before, .sh2 .sh2-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #3d4ee2 transparent transparent transparent;
+  bottom: -.6em;
+}
+
+.sh2 .sh2-content:before {
+  left: 0;
+  border-width: .6em 0 0 .6em;
+}
+
+.sh2 .sh2-content:after {
+  right: 0;
+  border-width: .6em .6em 0 0;
+}
+
+.non-semantic-protector { /* Must be placed in direct parent element for sh to work correctly */
+  position: relative;
+  z-index: 1;
+}
+
 /* Page Styling */
 
 #header-bottom {
@@ -263,65 +380,6 @@ h2 {
 
 .indent {
   text-indent: 2.0em;
-}
-
-.sh1 {
-  font-size: 20pt !important;
-
-  width: 50%;
-
-  position: relative;
-  background: #7d8aff;
-  color: #f2f1f1;
-  text-align: center;
-  padding: 1em 2em;
-  margin: 2em auto 3em;
-
-}
-
-.sh1:before, .sh1:after{
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: -1em;
-  border: 1.5em solid #5464f6;
-  z-index: -1;
-}
-
-.sh1:before {
-  left: -2em;
-  border-right-width: 1.45em;
-  border-left-color: transparent;
-}
-
-.sh1:after {
-  right: -2em;
-  border-left-width: 1.45em;
-  border-right-color: transparent;
-}
-
-.sh1 .sh1-content:before, .sh1 .sh1-content:after {
-  content: "";
-  position: absolute;
-  display: block;
-  border-style: solid;
-  border-color: #3d4ee2 transparent transparent transparent;
-  bottom: -1em;
-}
-
-.sh1 .sh1-content:before {
-  left: 0;
-  border-width: 1em 0 0 1em;
-}
-
-.sh1 .sh1-content:after {
-  right: 0;
-  border-width: 1em 1em 0 0;
-}
-
-.non-semantic-protector {
-  position: relative;
-  z-index: 1;
 }
 
 #intro {
