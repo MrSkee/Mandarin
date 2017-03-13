@@ -118,9 +118,9 @@
   background: #7d8aff;
   color: #f2f1f1;
   text-align: center;
+  letter-spacing: .1em;
   padding: .5em 2em;
   margin: 2em auto 3em;
-
 }
 
 .sh2:before, .sh2:after{
@@ -255,7 +255,7 @@ h2 {
   float: left;
   width: 90%;
   margin: 0 auto;
-  padding: 10% 5% 10% 5%;
+  padding: 5% 5% 10% 5%;
   font-size: 10rem;
 }
 
@@ -373,13 +373,41 @@ h2 {
   width: 100%
 }
 
-#body p {
-  font-size: 15pt;
+.row {
+  display: flex;
+}
+
+.column {
+  width: 40%;
+  padding: 0 7%;
   float: left;
+  flex: 1;
+}
+
+.divider-border {
+  border-right: 1px solid;
+  border-color: grey;
+}
+
+#body p {
+  float: left;
+  letter-spacing: normal;
 }
 
 .indent {
   text-indent: 2.0em;
+}
+
+.english {
+  font-family: 'Raleway';
+  font-size: 15pt;
+  line-height: 1;
+}
+
+.chinese {
+  font-size: 15pt;
+  letter-spacing: normal;
+  line-height: 1.3;
 }
 
 #intro {
