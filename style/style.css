@@ -378,6 +378,7 @@ h2 {
 
 .row {
   display: flex;
+  margin-top: 7%;
 }
 
 .column {
