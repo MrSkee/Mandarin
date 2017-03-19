@@ -1,3 +1,5 @@
+/* Copyright (c) Sean Kee 2017 */
+
 /*var body = document.querySelector('body');
 var body_container = body.querySelector('body-container');
 var body_container_height = getComputedStyle(body_container).height.split('px')[0];
